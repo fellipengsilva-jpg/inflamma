@@ -1,0 +1,492 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #e9f0f7;
+  background: #080d14;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  background: #080d14;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+.app {
+  max-width: 1600px;
+  margin: auto;
+  padding: 0 7%;
+}
+
+.navbar {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #1c2835;
+}
+
+.logo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 23px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.logo span {
+  color: #28c5e5;
+}
+
+nav {
+  display: flex;
+  gap: 35px;
+}
+
+nav a,
+.edition {
+  color: #8494a5;
+  font-size: 12px;
+}
+
+nav a:hover {
+  color: #28c5e5;
+}
+
+.edition {
+  letter-spacing: 2px;
+}
+
+.hero {
+  min-height: 650px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 30px;
+  padding: 70px 0;
+}
+
+.eyebrow,
+.section-number {
+  color: #28c5e5;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.pulse {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background: #28c5e5;
+  border-radius: 50%;
+  margin-right: 9px;
+  box-shadow: 0 0 12px #28c5e5;
+}
+
+.hero h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(42px, 5.5vw, 76px);
+  line-height: 1.08;
+  letter-spacing: -3px;
+  margin: 30px 0;
+}
+
+.hero h1 span {
+  color: #28c5e5;
+}
+
+.hero-content > p {
+  max-width: 470px;
+  color: #91a0af;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.start-button {
+  display: inline-flex;
+  gap: 35px;
+  align-items: center;
+  margin-top: 38px;
+  padding: 17px 22px;
+  background: #28c5e5;
+  color: #061019;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: 0.25s;
+}
+
+.start-button:hover {
+  background: #a1edfa;
+  transform: translateY(-3px);
+}
+
+.start-button span {
+  font-size: 17px;
+}
+
+.hero-meta {
+  display: flex;
+  gap: 25px;
+  margin-top: 75px;
+  color: #617181;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+}
+
+.hero-visual {
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(ellipse, #123344 0%, #0b1721 38%, #080d14 72%);
+}
+
+.visual-ring {
+  position: absolute;
+  border: 1px solid #28c5e5;
+  border-radius: 50%;
+  transform: rotate(-25deg);
+}
+
+.ring-one {
+  width: 290px;
+  height: 290px;
+  opacity: 0.45;
+}
+
+.ring-two {
+  width: 390px;
+  height: 160px;
+  opacity: 0.3;
+}
+
+.visual-core {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle, #1c7890, #0b2838 65%, #07131d);
+  border: 1px solid #35d8f3;
+  box-shadow: 0 0 60px #159cba66;
+  color: white;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  z-index: 1;
+}
+
+.visual-label {
+  position: absolute;
+  color: #91a0af;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+.visual-label span {
+  color: #28c5e5;
+  margin-right: 8px;
+}
+
+.label-top {
+  top: 35px;
+  right: 15px;
+}
+
+.label-bottom {
+  bottom: 35px;
+  left: 15px;
+}
+
+/* SEÇÃO ANATÔMICA */
+
+.anatomy-section {
+  border-top: 1px solid #1c2835;
+  padding: 90px 0;
+  scroll-margin-top: 30px;
+}
+
+.anatomy-heading {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.anatomy-heading h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 36px;
+  margin: 16px 0;
+}
+
+.anatomy-heading p {
+  color: #8494a5;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.anatomy-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 60px;
+  max-width: 950px;
+  margin: auto;
+}
+
+.body-illustration {
+  background: radial-gradient(ellipse, #102b39, #080d14 72%);
+  border: 1px solid #1c2835;
+  padding: 20px;
+  text-align: center;
+}
+
+.body-illustration svg {
+  width: 100%;
+  max-height: 560px;
+  overflow: visible;
+}
+
+.organ {
+  opacity: 0.88;
+  transition: opacity 0.3s, filter 0.3s;
+}
+
+.organ-selected {
+  opacity: 1;
+  filter: drop-shadow(0 0 9px #28c5e5);
+  transition: opacity 0.3s, filter 0.3s;
+}
+
+.organ-selected path {
+  stroke: #f6d4ca;
+  stroke-width: 2.5;
+}
+
+.anatomy-caption {
+  color: #617181;
+  font-size: 9px;
+  letter-spacing: 2px;
+  padding: 12px;
+}
+
+.anatomy-info {
+  width: 100%;
+}
+
+.organ-button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 15px;
+  margin-top: 10px;
+  background: #0b131c;
+  color: #91a0af;
+  border: 1px solid #1c2835;
+  cursor: pointer;
+  font-size: 13px;
+  text-align: left;
+  transition: 0.2s;
+}
+
+.organ-number {
+  color: #28c5e5;
+  margin-right: 5px;
+}
+
+.organ-arrow {
+  margin-left: auto;
+}
+
+.organ-button.active,
+.organ-button:hover {
+  border-color: #28c5e5;
+  color: #e9f0f7;
+  background: #102331;
+}
+
+.organ-description {
+  margin-top: 30px;
+  padding: 24px;
+  border-left: 2px solid #28c5e5;
+  background: #0c151f;
+  min-height: 185px;
+}
+
+.organ-description > span {
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: #28c5e5;
+}
+
+.organ-description h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  margin: 15px 0;
+  font-size: 22px;
+}
+
+.organ-description p {
+  color: #91a0af;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* JORNADA */
+
+.journey {
+  border-top: 1px solid #1c2835;
+  padding: 75px 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.journey-heading {
+  grid-column: 1 / -1;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.journey h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 35px;
+  margin: 15px 0;
+}
+
+.journey-heading p {
+  color: #8494a5;
+  font-size: 14px;
+}
+
+.journey-card {
+  border: 1px solid #1c2835;
+  padding: 25px 20px;
+  min-height: 170px;
+  transition: 0.25s;
+}
+
+.journey-card:hover {
+  border-color: #28c5e5;
+  background: #0d1923;
+  transform: translateY(-5px);
+}
+
+.journey-card > span {
+  color: #28c5e5;
+  font-size: 11px;
+}
+
+.journey-card h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  margin: 22px 0 10px;
+  font-size: 17px;
+}
+
+.journey-card p {
+  color: #8494a5;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+footer {
+  min-height: 75px;
+  border-top: 1px solid #1c2835;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #617181;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 800px) {
+  .app {
+    padding: 0 5%;
+  }
+
+  .navbar {
+    height: 75px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .edition {
+    font-size: 9px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 65px 0;
+  }
+
+  .hero-visual {
+    min-height: 350px;
+  }
+
+  .anatomy-layout {
+    gap: 30px;
+  }
+
+  .journey {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  footer {
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 20px 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .anatomy-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .anatomy-heading h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 450px) {
+  .journey {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-meta {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero h1 {
+    letter-spacing: -2px;
+  }
+}
